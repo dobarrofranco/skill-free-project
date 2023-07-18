@@ -1,0 +1,227 @@
+:root {
+    --fuentePrincipal: 'Cabin', sans-serif;
+    
+    --primario: #00012C;
+    --secundario: #0008FF;
+    --negro: #000000;
+    --blanco: #ffffff;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fuentePrincipal);
+    font-size: 1.6rem;
+    line-height: 1.8;
+    background-color: var(--primario);
+}
+
+/* Globales */
+.contenedor {
+    max-width: 120rem;
+    width: min(90%, 120rem);
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,h2,h3,h4,h5 {
+    font-family: var(--fuentePrincipal);
+    line-height: 1.2;
+    color: var(--blanco);
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+h2 {
+    font-size: 4rem;
+}
+h3 {
+    font-size: 3.2rem;
+}
+h4 {
+    font-size: 2.8rem;
+}
+
+h5 {
+    font-size: 1.8rem;
+}
+
+p {
+    color: var(--blanco);
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Utilidades */
+.no-margin {
+    margin: 0;
+}
+.no-padding {
+    padding: 0;
+}
+.centrar-texto {
+    text-align: center;
+}
+
+/* Header */
+
+.header {
+    background-image: url(../img/soloArboles.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/* Barra */
+
+.barra {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+
+.navegacion__enlace {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--blanco);
+}
+
+.navegacion__enlace:hover {
+    color: rgb(2, 175, 255);
+    transition: 0.5s;
+    /* border-bottom: 1px solid var(--blanco); */
+}
+
+.logo__enlace {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    width: 20rem;
+}
+
+@media (min-width: 768px) {
+    .barra {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 4rem 0;
+    }
+    
+    .navegacion {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .navegacion__enlace {
+        font-size: 4rem;
+        justify-content: space-between;
+    }
+
+}
+
+/* Presentación */
+
+.presentacion {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+
+/* Historia */
+
+.historia__parrafo {
+    margin-block-end: 3rem;
+}
+
+.historia__parrafo:last-of-type {
+    border: none;
+}
+
+/* Videos */
+
+.videos__subtitulo {
+    font-weight: normal;
+    padding: 10px;
+    border-bottom: 1px solid var(--secundario);
+}
+
+.videos__parrafo {
+    padding: 1rem;
+    padding-bottom: 0;
+    font-size: 2rem;
+}
+
+.youtube {
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+}
+
+.youtube__imagen {
+    width: 10rem;
+    margin: 1rem;
+    border-radius: 10rem;
+}
+
+.youtube__imagen:hover {
+    cursor: pointer;
+}
+
+/* Nosotros */
+
+.link-shows {
+    color: var(--blanco);
+    font-weight: 700;
+    padding: 1rem 1rem 1rem 0;
+}
+
+.evento-shows__link {
+    padding: 0 0 1rem;
+    border-bottom: 1px solid var(--secundario);
+    /* text-align: center; */
+}
+
+.link-shows:hover {
+    border-bottom: 1px solid;
+    background: rgba(2, 175, 255, 0.116);
+}
+
+.link-shows:active {
+    color: violet
+}
+
+/* Nosotros Entrada */
+
+.entrada {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 2rem;
+    border-bottom: 1px solid var(--secundario);
+}
+
+.entrada__titulo {
+    padding: 2rem;
+}
+
+.entrada__imagen {
+    padding: 2rem 0;
+}
